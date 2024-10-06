@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservación De Mesa</title>
+</head>
+<body onclick="playAudio()" style="background-color: black;">
+    <form>
+        <img src="Jayke.png" width="300"/>
+        <audio id="musica" loop>
+            <source src="TXT.mp3" type="audio/mpeg">
+        </audio>
+        <script>
+            function playAudio(){
+                document.getElementById("musica").play();
+            }
+        </script>
+        <div>
+            <label style="color: #ffffff;" for="Correo">Ingrese su correo electronico</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo" required/>   
+        </div>
+        <div>
+            <label style="color: #ffffff;" for="fecha">Ingrese la fecha de reserva</label>
+            <input type="date"  id="date" name="date" required/>
+        </div>
+        <div>
+            <label style="color: #ffffff;" for="personas">Ingrese el numero de personas</label>
+            <input type="number" min="1" max="8" id="number" name="number" required/>
+        </div>
+        <div>
+            <label style="color: #ffffff;" for="cancelación">I agree the cancellation policy</label>
+            <input type="checkbox" id="agree" name="agree" required/>
+        </div>
+        <button type="submit">Book now</button>
+    </form>  
+</body>
+</html>
+
